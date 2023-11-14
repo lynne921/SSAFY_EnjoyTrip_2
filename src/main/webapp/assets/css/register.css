@@ -1,0 +1,65 @@
+body {
+  background-color: #e4f1ff;
+  background-size: cover; /* 이미지를 화면에 꽉 채우도록 크기 조정 */
+  background-repeat: no-repeat; /* 배경 이미지 반복 없음 */
+  background-attachment: fixed; /* 스크롤 시 배경 이미지 고정 */
+  padding-top: 50px;
+}
+.register-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 30px;
+  background-color: white;
+  width: 500px;
+  padding-bottom: 50px;
+  box-shadow: 0 0 10px #adc4ce;
+  margin-bottom: 140px;
+}
+.form {
+  width: 300px;
+  display: flex;
+  margin: 0 auto;
+}
+.login-logo {
+  width: 90px;
+  height: 100px;
+  margin-left: 220px;
+  margin-top: 100px;
+  margin-bottom: 70px;
+}
+
+input {
+  border: 1px solid #a1ccd1;
+  border-radius: 20px;
+  height: 42px;
+  margin-bottom: 20px;
+  padding-left: 15px;
+  padding-bottom: 3px;
+}
+
+.regi-btn {
+  border: none;
+  font-size: 15px;
+  border-radius: 20px;
+  width: 90px;
+  height: 38px;
+  margin-bottom: 20px;
+  background-color: #aed2ff;
+  width: 300px;
+  margin-top: 30px;
+  
+}
+.regi-btn:hover {
+  color: white;
+  box-shadow: 0 0 3px #aed2ff;
+}
+#userId,
+#password,
+#email,
+#name,
+#age,
+#pwdcheck {
+  width: 100%;
+}

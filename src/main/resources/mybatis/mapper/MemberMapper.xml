@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper
+	namespace="com.ssafy.enjoytrip.member.model.dao.MemberDao">
+	<select id="idCheck" parameterType="String" resultType="MemberDto">
+		select count(*)
+		from member
+		where userId=#{id}
+	</select>
+	
+	<insert id="joinMember" parameterType="MemberDto">
+		insert into member(userId, userName, userPwd, emailId, emailDomain, joinDate)
+		values(#{userId}, #{userName}, #{userPwd}, #{emailId}, #{emailDomain}, #{joinDate})
+	</insert>
+	
+	<select id="getMemberById" parameterType="String" resultType="MemberDto">
+		select userId, userName, userPwd, emailId, emailDomain, joinDate
+		from member
+		where userId=#{id}
+	</select>
+	
+	<update id="updatePwdById" parameterType="MemberDto">
+		update member set
+		userPwd = #{newPw2}
+		where userId = #{curId}
+	</update>
+	
+	<update id="updateEmailById" parameterType="MemberDto">
+		update member set 
+		emailDomain=#{newEmailDomain},
+		emailId = #{newEmailId}
+		where userId = #{userId}
+	</update>
+
+	<update id="deleteUserById" parameterType="String">
+		delete from member
+		where userId = #{id}
+	</update>
+</mapper>

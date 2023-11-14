@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ssafy.enjoytrip.board.model.dao.BoardDao">
+
+	<!-- 게시글 등록 -->
+	<insert id="writeArticle" parameterType="BoardDto">
+		insert into
+		board(articleNo, userId, subject, content, hit)
+		values(#{articleNo},#{userId},#{subject}, #{content}, #{hit})
+	</insert>
+
+	<!-- 게시글 수정 -->
+	<update id="modifyArticle" parameterType="BoardDto">
+		update board
+		set subject = #{subject}, content = #{content}
+		where articleNo = #{articleNo}
+	</update>
+
+	<!-- 게시글 삭제 -->
+	<delete id="deleteArticle" parameterType="int">
+		delete from board
+		where articleNo = #{articleNo}
+	</delete>
+
+	<!-- 게시글 리스트 -->
+	<select id="listArticle" parameterType="PageBean" resultType="BoardDto">
+		select *
+		from board
+		order by articleNo desc
+	</select>
+
+	<!-- 조회수 업데이트 -->
+	<update id="updateHit" parameterType="int">
+		update board
+		set hit = hit + 1
+		where articleNo = #{articleNo}
+	</update>
+	
+	<!-- 페이지빈 -->
+	<select id="totalCount"	parameterType="PageBean" resultType="int">
+		select count(*)
+		from board
+	</select>
+	
+	<select id="getArticle" parameterType="int" resultType="BoardDto">
+		select *
+		from board
+		where articleNo = #{articleNo}
+	</select> 
+
+</mapper>

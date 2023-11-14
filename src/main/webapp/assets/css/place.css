@@ -1,0 +1,110 @@
+/* 지역별 핫플*/
+.title {
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.title-div {
+  background-color: white;
+  width: 200px;
+  height: 45px;
+  text-align: center;
+  border-radius: 30px;
+  padding-top: 8px;
+  box-shadow: 0 0 10px lightgray;
+}
+.title-div:hover {
+  box-shadow: 0 0 10px gray;
+}
+/* 드롭다운 버튼 하나하나 */
+.form-select {
+  /* background-color: #caedff; */
+  background-color: white;
+  border: none;
+  margin: 30px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  width: 150px;
+}
+/* 드롭다운 3개*/
+.drops {
+  display: flex;
+  margin-left: 7%;
+}
+.both {
+  display: flex;
+  flex-wrap: wrap;
+}
+.table-div {
+  width: 40%;
+  margin-left: 3%;
+  height: 600px;
+  overflow-y: scroll;
+  margin-bottom: 200px;
+}
+#btn-search {
+  border-radius: 20px;
+  margin: 30px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  width: 100px;
+  background-color: lightgray;
+}
+#btn-search:hover {
+  /* background-color: #caedff; */
+  box-shadow: 0 0 10px darkgray;
+}
+body {
+  background-color: #f0f0f0;
+  background-size: cover; /* 이미지를 화면에 꽉 채우도록 크기 조정 */
+  background-repeat: no-repeat; /* 배경 이미지 반복 없음 */
+  background-attachment: fixed; /* 스크롤 시 배경 이미지 고정 */
+  padding-top: 50px;
+}
+table {
+  background-color: white;
+}
+.nemo {
+  padding: 10px 10px;
+  background-color: #f8fdcf;
+  width: 250px;
+  height: auto;
+  max-height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  /* align-content: center; */
+}
+.nemo-title {
+  display: block;
+  margin: 0 auto;
+  background-color: #fff6e0;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1px solid #f0b86e;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+.nemo-addr {
+  display: block;
+  margin: 0 auto;
+  background-color: #fff6e0;
+  border: 1px solid #f0b86e;
+  box-shadow: 0 0 10px #f0b86e;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 12px;
+  color: #61677a;
+}
+.rounded {
+  display: block;
+  margin: 0 auto;
+  max-width: 230px;
+  max-height: 150px;
+}
